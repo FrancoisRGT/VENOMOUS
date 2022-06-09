@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!--FaceJunia-->
+    <link rel="stylesheet" type="text/css" href="../css/facejunia.css" />
+    <link rel="stylesheet" type="text/css" href="../css/instagroove.css" />
+    <link rel="stylesheet" type="text/css" href="../css/imail.css" />
+    <link rel="stylesheet" type="text/css" href="../css/faux-rom.css" />
+    <link rel="stylesheet" type="text/css" href="../css/mail.css" />
+    <script src="https://kit.fontawesome.com/8d713fbf44.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Jeu</title>
+</head>
+<body>
+    <!-- Page de l'ordi -->
+    <div id="Room" class="Room">
+
+        <div id="Ordi"></div>
+        <div class="BureauClick">
+            <p></p>
+        </div>
+        
+        <div id="Table"></div>
+        <div class="TableClick">
+            <p></p>
+        </div>
+
+        <div id="TV"></div>
+        <div class="TVClick">
+            <p></p>
+        </div>
+
+        <div id="Frigo"></div>
+        <div class="FrigoClick">
+            <p></p>
+        </div>
+
+        <div id="Lettre"></div>
+        <div class="LettreClick">
+            <p></p>
+        </div>
+
+        <canvas class="myCanvas"></canvas>
+    </div>
+
+    <div id="waiter">
+
+    </div>
+
+    <div id="fondTele">
+        <div class="clickBox"></div>
+        <div class="mdpBox" style="display: none;" onclick="document.querySelector('.mdpBox').style.display = 'none'">yvFofzUgoF15QxJnojuJ</div>
+        <div class="ComeBackRoom" rel="fondTele"> <i class="fa-solid fa-angle-left"></i> Retour Chambre</div>
+    </div>
+
+    <div id="lettre" style="display: none"; onclick="document.querySelector('#lettre').style.display = 'none', inRoom = true"></div>
+
+    <div id="fondFrigo">
+        <div class="clickPost-itJunia"></div>
+        <div class="mdpFrigoJunia" style="display: none;" onclick="document.querySelector('.mdpFrigoJunia').style.display = 'none'">mdpn1234</div>
+        <div class="ComeBackRoom" rel="fondFrigo"> <i class="fa-solid fa-angle-left"></i> Retour Chambre</div>
+    </div>
+
+    <div id="fondTable">
+        <div class="clickLivre"></div>
+        <div class="clickPost-itInsta" style="display: none;"></div>
+        <div class="mdpTableInsta" style="display: none;" onclick="document.querySelector('.mdpTableInsta').style.display = 'none'">202220212020</div>
+        <div class="tableauMdp" style="display: none;" onclick="document.querySelector('.tableauMdp').style.display = 'none'"></div>
+        <div class="ComeBackRoom" rel="fondTable" none;" onclick="document.querySelector('.tableauMdp').style.display = 'none'"> <i class="fa-solid fa-angle-left"></i> Go Room</div>
+    </div>
+    
+    <div id="fondBureau">
+        <div class="clickPC"></div>
+        <div class="ComeBackRoom" rel="fondBureau"> <i class="fa-solid fa-angle-left"></i> Retour Chambre</div>
+        <div class="clickMdpPC"></div>
+        <!-- mots de passe PC -->
+        <div class="mdpPC" style="display: none;" onclick="document.querySelector('.mdpPC').style.display = 'none'">J3su1sl3bo0sS</div>
+    </div>
+
+    <div id="fondPC">
+        <div id="PC" style="display: none;">
+            <div class="Icon IconFaceJunia" rel="FaceJunia"></div>
+            <div class="Icon IconInstaGroove" rel="InstaGroove"></div>
+            <div class="Icon IconImail" rel="Imail"></div>
+            <div class="Icon IconForum" rel="Faux-Rom"></div>
+            <div class="ComeBackBureau"> <i class="fa-solid fa-angle-left"></i> Retour Bureau</div>
+            <div class="pop">
+                <div class="pop1">
+                    <img src="/front/css/img/popup/doigt.png" height="150vh" width="150vh">
+                </div>
+                <div class="pop2">
+                    <img src="/front/css/img/popup/jap.png" height="300vh" width="300vh">
+                </div>
+                <div class="pop3">
+                    <img src="/front/css/img/popup/junia.jpg" height="400vh" width="400vh">
+                </div>
+                <div class="pop4">
+                    <img src="/front/css/img/popup/play.png" height="350vh" width="350vh">
+                </div>
+            </div>
+            <div class="wifi">
+                <i class="fa-solid fa-wifi wifiicon" style="display: none;"></i>
+            </div>
+            <div class="parametreWifi" style="display: none;">
+                <h1>Wifi</h1>
+                <div class="reseau">
+                    <h3>Wifi McObese gratuit</h3>
+                    <p class="mcWifi">Connecte</p>
+                </div>
+                <div class="reseau">
+                    <h3>Bbox-76468GF</h3>
+                    <p class="PasmcWifi">Non Connecte</p>
+                    <input type="text" id="BonWifi">
+                    <div class="connectReseau">Se connecter</div>
+                </div>
+            </div>
+        </div>
+        <div id="PClock">
+            <h1>Naikte Paco</h1>
+            <input type="text" id="PCpassword">
+            <div class="ComeBackBureau"> <i class="fa-solid fa-angle-left"></i> Retour Bureau</div>
+        </div>
+
+        <div id="FaceJunia" rel="FaceJunia">
+        
+            <div class="headerFaceJunia">
+                <i class="Title fa-brands fa-facebook">  FaceJunia</i>
+                <div class="goBack"> <i class="cross fa-solid fa-xmark croixgo"></i> </div>
+            </div>
+    
+            <!-- Affichage fenetre fermer -->
+            <div class="bigboxlockFaceJunia">
+                <div class="middleboxlockFaceJunia">
+    
+                    <div class="FaceJuniaPass">
+                        <h1>Mot de Passe</h1>
+                        <input type="text" id="FaceJuniapassword">
+                        <div class="valide valideFaceJunia" rel="FaceJuniapassword">Se connecter</div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Affichage fenetre ouvert -->
+            <div class="bigboxFaceJunia">
+                <div class="middleboxFaceJunia">
+                    <div class="wallpaper"></div>
+                
+                    <div class="pdp"></div>
+                    
+                    <div class="name">
+                        <h1>Naikte Paco </h1>
+                    </div>
+            
+                    <div class="details"> 
+                        <h2>Details publics : </h2>
+                    </div>
+    
+                    <div class="fa-cog fa-solid reglage"></div>
+                    
+                
+                    <div class="infos">
+                        <i class="fa-solid fa-heart" id="co"> Celibataire </i>
+                        <i class="fa-solid fa-graduation-cap" id="etu"> Etudie a Venomous School</i>
+                        <i class="fa-solid fa-house" id="hab"> Habite a l'ile</i>
+                        <i class="fa-solid fa-phone" id="tel"> 01 23 45 67 89</i>
+                    </div>
+            
+                    <div class="loisirs">
+                        <h3>Loisirs : Le sport - les amis - l'informatique</h3>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Affichage fenetre parametre -->
+            <div class="bigboxFaceJunia_para">
+                <div class="middleboxFaceJunia_para">
+    
+                    <div class="border changeMdp">Changer le mot de passe</div>
+                    <div class="border changeInfo">Changer les infos</div>
+                    <div class="border deconnection">Se deconnecter</div>
+                    <div class="border retourProfil">Retourner sur le profil</div>
+    
+                </div>
+            </div>
+    
+            <!-- Affichage fenetre Changement de mots de passe -->
+            <div class="bigboxFaceJunia_changeMdp">
+                <div class="middleboxFaceJunia_changeMdp">
+    
+                    <h1>Changer son Mot de Passe</h1>
+    
+                    <div class="Text">Ancien Mot de Passe
+                        <input class="form-control" id="oldPassword" name="oldPassword" value="" placeholder="Entrez l'ancien mot de passe" type="password">
+                    </div>
+                    
+                    <div class="Text">Nouveau Mot de Passe
+                        <input class="form-control" id="newPassword" name="newPassword" value="" placeholder="Entrez le nouveau mot de passe" type="password">
+                    </div>
+                    
+                    <div class="Text">Confirmation
+                        <input class="form-control" id="confirmPassword" name="confirmPassword" value="" placeholder="Re-saisissez le nouveau mot de passe" type="password">
+                    </div>
+    
+                    <span id="msg"></span>
+    
+                    <div class="annulerMdp">Annuler</div>
+                    <div class="ConfirmerMdpFaceJunia">Confirmer</div>
+    
+                </div>
+            </div>
+    
+            <!-- Affichage fenetre Changement d'informations -->
+            <div class="bigboxFaceJunia_changeInfo">
+                <div class="middleboxFaceJunia_changeInfo">
+    
+                    <h1>Changer les informations</h1>
+    
+                    <div class="Text"><i class="fa-solid fa-heart"></i>
+                        Statut affectif
+                        <select name="StatueAffectif" id="StatueAffectif">
+    
+                            <option value="marié">Marié</option>
+                            <option value="couple">Couple</option>
+                            <option value="celibataire">Célibataire</option>
+                            <option value="seul">Seul</option>
+                        </select>
+                        <select name="StatuePrivatePubic" id="StatueAffectifState">
+                            <option value="public">Public</option>
+                            <option value="prive">Privé</option>
+                        </select>
+                    </div> 
+                        
+                    <div class="Text"><i class="fa-solid fa-graduation-cap"></i> 
+                        Ecole 
+                        <input type="text" id="ecoleinfo">
+                        <select name="ecolePrivatePubic" id="ecolestate">
+                            <option value="public">Public</option>
+                            <option value="prive">Privé</option>
+                            
+                        </select>
+                    </div>
+                    
+                    <div class="Text"><i class="fa-solid fa-house"></i>
+                        Adresse
+                        <input type="text" id="habitatinfo">
+                        <select name="AdressePrivatePubic" id="habitatstate">
+                            <option value="public">Public</option>
+                            <option value="prive">Privé</option>
+                        </select>
+                    </div>
+    
+                    <div class="Text"><i class="fa-solid fa-phone"></i>
+                        Telephone
+                        <input type="text" id="telinfo">
+                        <select name="TelPrivatePubic" id="telstate">
+                            <option value="public">Public</option>
+                            <option value="prive">Privé</option>
+                        </select>
+                    </div>
+    
+                    <div class="annulerInfo">Annuler</div>
+                    <div class="ConfirmerInfoFaceJunia">Confirmer</div>
+    
+                </div>
+            </div>
+    
+    
+        </div>
+
+        <div id="InstaGroove" rel="InstaGroove">
+
+            <div class="headerInstaGroove">
+                <i class="Title fa-brands fa-instagram"> InstaGroove</i>
+                <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
+            </div>
+    
+                    <!-- Affichage fenetre ferme -->
+            <div class="bigboxLockInstaGroove">  
+                <div class="middleboxlock_InstaGroove">
+                    <div class="InstaGroovePass">
+                        <h1>Mot de Passe</h1>
+                        <input type="text" id="InstaGroovepassword">
+                        <div class="valide valideInstaGroove" rel="InstaGroovepassword">Se connecter</div>
+                    </div>
+                </div>
+            </div>
+    
+                        <!-- Affichage fenetre ouvert -->
+            <div class="bigboxInstaGroove">
+                <div class="middleboxInstaGroove">
+                    <div class="imgpseudo">
+                        <h3>@Pacololo</h3>
+                        <img src="/front/css/img/pdp-annon.png" height="100vh" width="100vh ">
+                    </div>
+    
+                    <div class="icon">
+                        <i class="fa-solid fa-gears iconeregInsta"></i>
+                        <i class="fa-solid fa-paper-plane iconemess"></i>
+                    </div>
+    
+                    <div class="boitedestr">
+                        <div class="publication">
+                            <h3>18</h3>
+                            <h4>Publications</h4>
+                        </div>
+                        <div class="abonnes">
+                            <h3>215</h3>
+                            <h4>Abonnes</h4>
+                        </div>
+                        <div class="abonnement">
+                            <h3>476</h3>
+                            <h4>Abonnements</h4>
+                        </div> 
+                    </div>
+    
+                    <div class="bioetbio">
+                        <div class="bio">
+                            <h3>Bio : </h3>
+                        </div>
+                        <div class="descbio">
+                            <p>Passione par l'informatique et les jeux videos
+                                je poste ici quelques photos qui me plaisent dans 
+                                divers domaines, n'hesites pas a t'abonner ! :)
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="infoInstaGroove">
+                        <div class="nomuser">
+                            <h3>Nom d'utilisateur :</h3>
+                            <div class="pseudoInstaGroovechange">Paco</div>
+                        </div>
+                        <div class="locauser">
+                            <h3>Localisation :</h3>
+                            <div class="locInstaGroovechange">Boulognes-sur-Mer</div>
+                        </div>
+                        <div class="pvuser">
+                            <h3>Statut du compte :</h3>
+                            <div class="statutInstaGroovechange">Public</div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+                    <!-- Affichage fenetre parametre -->
+            <div class="bigboxInstaGroove_para">
+                <div class="middleboxInstaGroove_para">  
+                    
+                    <div class="questionInstaGroove">
+                        <div class="pseudoInstaGroove">Veuillez saisir votre nouveau pseudo : <input type="text" id="pseudoinfoInstaGroove"></div>
+    
+                        <div class="locaInstaGroove">Est-ce que les autres utilisateurs peuvent acceder a ma localisation :
+                            <select name="locaInstaGroovename" id="locainfoInstaGroove">
+    
+                                <option value="oui">Oui</option>
+                                <option value="Non">Non</option>
+                            </select>
+                        </div>
+        
+                        <div class="statutcompteInstaGroove">Choisissez si vous voulez que votre compte soit public ou prive : 
+                            <select name="statutInstaGroove" id="statueinfoInstaGroove">
+    
+                            <option value="prive">Privé</option>
+                            <option value="public">Public</option>
+                        </select></div>
+                        
+                        <div class="mdpInstaGroove">Changer le mot de passe</div>
+    
+                    </div>
+    
+                    <div class="ConfirmerInfoInstaGroove">Confirmer </div>
+    
+                    <div class="border retournerInstaGroove">Retourner sur InstaGroove</div>
+    
+                </div>
+            </div>
+    
+            <!-- Affichage fenetre Changement de mots de passe -->
+            <div class="bigboxInstaGroove_changeMdp">
+                <div class="middleboxInstaGroove_changeMdp">
+    
+                    <h1>Changer son Mot de Passe</h1>
+    
+                    <div>Ancien Mot de Passe
+                        <input id="oldPasswordInstaGroove" value="" placeholder="Entrez l'ancien mot de passe">
+                    </div>
+                    
+                    <div>Nouveau Mot de Passe
+                        <input id="newPasswordInstaGroove" value="" placeholder="Entrez le nouveau mot de passe">
+                    </div>
+                    
+                    <div>Confirmation
+                        <input id="confirmPasswordInstaGroove" value="" placeholder="Re-saisissez le nouveau mot de passe">
+                    </div>
+    
+                    <span id="msgInstaGroove"></span>
+    
+                    <div class="annulerMdpInstaGroove">Annuler</div>
+                    <div class="ConfirmerMdpInstaGroove">Confirmer</div>
+    
+                </div>
+            </div>
+    
+            <!-- Affichage fenêtre messages privés -->
+            <div class="bigboxInstaGroove_mess">
+                <div class="middleboxInstaGroove_mess">
+                    <i class="fa-solid fa-house retourInstaGroove"></i>
+                    <input class="form-recherch" id="Recherchez" name="Recherchez" placeholder="Recherchez">
+    
+                    <div class="defilenom">
+                        <div class="defile" rel="nom1"> 
+                            <img src="/front/css/img/pdp-annon.png" height="50vh" width="50vh">
+                            <h3>Romain</h3>
+                        </div>
+                        <div class="defile"rel="nom2">
+                            <img src="/front/css/img/pdp-annon.png"height="50vh" width="50vh">
+                            <h3>Alex</h3>
+                        </div>
+                        <div class="defile"rel="nom3">
+                            <img src="/front/css/img/pdp-annon.png"height="50vh" width="50vh">
+                            <h3>Didier</h3>
+                        </div>
+                        <div class="defile"rel="nom4">
+                            <img src="/front/css/img/pdp-annon.png"height="50vh" width="50vh">
+                            <h3>горячий сосед</h3>
+                        </div>
+                        <div class="defile"rel="nom5">
+                            <img src="/front/css/img/pdp-annon.png"height="50vh" width="50vh">
+                            <h3>Aymeric</h3>
+                        </div>
+                        
+                    </div>
+    
+                    <div class="discussion active">
+                        <div class="presentationmess">
+                            <div class="fa-solid fa-location-arrow arrowpres"></div>
+                            <h2>Vos messages</h2>
+                            <p>Envoyez des photos et des messages prives à un(e) ami(e) ou à un groupe.</p>
+                            
+                        </div>
+                    </div>
+    
+                    
+    
+                    <div class="discussion nom1" style="display: none;">
+                        <div class="headerdiscuss">
+                            <div class="fa-solid fa-ban poubelle"></div>
+                            <h2>Romain</h2>
+                        </div>
+                    </div>
+                    <div class="discussion nom2" style="display: none;">
+                        <div class="headerdiscuss">
+                            <div class="fa-solid fa-ban poubelle"></div>
+                            <h2>Alex</h2>
+                        </div>
+                    </div>
+                    <div class="discussion nom3" style="display: none;">
+                        <div class="headerdiscuss">
+                            <div class="fa-solid fa-ban poubelle"></div>
+                            <h2>Didier</h2>
+                        </div>
+                    </div>
+                    <div class="discussion nom4" style="display: none;">
+                        <div class="headerdiscuss">
+                            <div class="fa-solid fa-ban poubelle4"></div>
+                            <h2>горячий сосед</h2>
+                        </div>
+                    </div>
+                    <div class="discussion nom5" style="display: none;">
+                        <div class="headerdiscuss">
+                            <div class="fa-solid fa-ban poubelle5"></div>
+                            <h2>Aymeric</h2>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+            
+    
+        </div>
+
+        <div id="Imail" rel="Imail">
+
+            <div class="headerImail">
+                <i class="Title fa-brands fa-imail"> Imail</i>
+                <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
+            </div>
+    
+                    <!-- Affichage fenetre ferme -->
+            <div class="bigboxlockImail">  
+                <div class="middleboxlock_Imail">
+                    <div class="ImailPass">
+                        <h1>Mot de Passe</h1>
+                        <input type="text" id="Imailpassword">
+                        <div class="valide valideImail" rel="Imailpassword">Se connecter</div>
+                    </div>
+                </div>
+            </div>
+    
+                        <!-- Affichage fenetre ouvert -->
+            <div class="bigboxImail">
+                <div class="middleboxImail">
+                    <div class="barreGauche">
+                        <!--<div class="NewImail">Nouveau</div>-->
+                        <div class="boiteReception" onclick="document.querySelector('.barreDroite').style.display = 'block',
+                                                             document.querySelector('.allmessageImail').style.display = 'block',
+                                                             document.querySelector('.mdp_Imail').style.visibility = 'hidden',
+                                                             document.querySelector('.allImailSupprimer').style.display = 'none'">
+                                                             Boite de Reception</div>
+                        <div class="ImailSupprimer" onclick="document.querySelector('.allImailSupprimer').style.display = 'block',
+                                                             document.querySelector('.allmessageImail').style.display = 'none'">
+                                                             Imail Supprimes</div>
+                        <div class="ImailSupprimer" onclick="document.querySelector('.barreDroite').style.display = 'none',
+                                                             document.querySelector('.mdp_Imail').style.visibility = 'visible'">
+                                                             Changer le mdp</div>                                     
+    
+                    </div>
+    
+                    <div class="mdp_Imail">
+                        <h1>Changer son Mot de Passe</h1>
+    
+                        <div>Ancien Mot de Passe
+                            <input class="form-control" id="oldPasswordImail" name="oldPassword" value="" placeholder="Entrez l'ancien mot de passe" type="password">
+                        </div>
+                        
+                        <div>Nouveau Mot de Passe
+                            <input class="form-control" id="newPasswordImail" name="newPassword" value="" placeholder="Entrez le nouveau mot de passe" type="password">
+                        </div>
+                        
+                        <div>Confirmation
+                            <input class="form-control" id="confirmPasswordImail" name="confirmPassword" value="" placeholder="Re-saisissez le nouveau mot de passe" type="password">
+                        </div>
+    
+                        <span id="msg"></span>
+    
+                        <div class="ConfirmerMdpImail">Confirmer</div>
+                    </div>
+    
+                    <div class="barreDroite" style="display: none;">
+                        <div>Rechercher
+                            <input type="text" class="rechercher"></input>
+                            <div class="fa fa-trash" id="bigtrash" style="display: none;"></div>
+                        </div>
+    
+                        <div class="allImailSupprimer">
+    
+                        </div>
+    
+                    <div class="allmessageImail">
+                            
+                            <div class="Imail_mainPage" rel="Louis">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Louis de Chez Zarrah</div>
+                                <div class="propoImail">Votre commande ...</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="BigBoss">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">LeBigBoss</div>
+                                <div class="propoImail">ceCi est un m ...</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="Roger">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Roger Doumien</div>
+                                <div class="propoImail">Salut Paco ! ...</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="BaNquE">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Credit Archicolle</div>
+                                <div class="propoImail">Bonjour M Nai ...</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="Lancaster">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Sylvie Lancaster</div>
+                                <div class="propoImail">Bonjour M Nai ...</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="Ebou">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Ebou</div>
+                                <div class="propoImail">Ebou Ebou Eb ...</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="Smith">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">John Smith</div>
+                                <div class="propoImail">Hello Paco ! ...</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="Chenevert">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Gabriel Chenevert</div>
+                                <div class="propoImail">Bonjour a tous ! ...</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="taoto">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Gabri Taoto</div>
+                                <div class="propoImail">aquí hay cero t ...</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="Narata">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Narata</div>
+                                <div class="propoImail">Narata ...</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="PiereBloc">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Pierre Bloc</div>
+                                <div class="propoImail">bonzouère !</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="UCG">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">UCG</div>
+                                <div class="propoImail">Bientot la fet ...</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="leCoinBon">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">LeCoinBon</div>
+                                <div class="propoImail">Y'a du nouv ...</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="Banque">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Banque</div>
+                                <div class="propoImail">Bonjour Paco Nai ...</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+                            <div class="Imail_mainPage" rel="Annouk">
+                                <div class="clickImail fa fa-square-o"></div>
+                                <div class="titreImail">Annouk de Fever</div>
+                                <div class="propoImail">Votre comm ...</div>
+                                <div class="iconImail fa fa-trash" aria-hidden="true"></div>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <div class="ReadImail Louis mail" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h2>Louis de chez ZARRAH</h2>
+                        <center>
+                            <h3>VOTRE COMMANDE N'A PAS PU ETRE LIVREE</h3>
+                            <p>Il y a eu un souci avec votre commande n° 453sxlsd345. Cliquez pour obtenir le detail de la livraison et pour pouvoir beneficier du SAV.</p>
+                            <button class="clickMe">Click me</button><!--ca lancera un des pop ups-->
+                        </center>
+                    </div>
+                    <div class="ReadImail BigBoss mail" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h2>LeBigBoss</h2>
+                        <h3 class="alignementGauche">Bonjour M Naikté</h3>
+                        <p class="alignementGauche">ceCi est un messaGe du dIrecteur General de L'etAblissement ou vOus etesS salarie. Pour voUs Joindre a lA reunion hebDomadaIre du TraitemEnt des RessourCes, veuillEz cliquer Sur l'inVitation CI deSsoUs rapidement.</p>
+                        <center>
+                            <button class="clickMe2">Joinndre la reEeunionn</button><!--ca lancera un des pop ups-->
+                        </center>
+                    </div>
+                    <div class="ReadImail Roger mail" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h2>Roger Doumien</h2>
+                        <h3 class="alignementGauche">Salut Paco !</h3>
+                        <p class="alignementGauche">N'oublie pas de terminer la partie présentation du projet du lundi 23 Janvier 2023</p>
+                        <p class="alignementGauche">A plus !</p>
+                    </div>
+                    <div class="ReadImail BaNquE mail" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h2>Credit Archicolle</h2>
+                        <h3 class="alignementGauche">Bonjour M Naikté</h3>
+                        <p class="alignementGauche">Un nouveau document est disponible sur notre site de la banque. Visitez le lien ci-dessous pour avoir le detail du document</p>
+                        <a style="font-size: 2vh;" class="alignementGauche" href="https://www.mozilla.org/fr/">yyy.accuei.ldelabanquE/ccreditArchicolle.wos</a><!--changer le href => ca lancera un des pop ups-->
+                    </div>
+                    <div class="ReadImail Lancaster mail" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h2>Sylvie Lancaster</h2>
+                        <h3 class="alignementGauche">Bonjour M Naikté,</h3>
+                        <p class="alignementGauche mail5">Je vous contacte pour vous rappeler qu'il est important que vous alliez renouveler votre carte de membre du club du tricot de France Compétition. J'en profite pour vous annoncer notre participation a une compétition de la coupe de l'Est qui aura lieu dans 2 mois au salon du tricot à Strasbourg. Contactez-moi si vous souhaitez participer.</p>
+                        <p class="alignementGauche basmail5">En esperant vous y retrouver, à bientot !</p>
+                    </div>
+                    <div class="ReadImail Ebou mail" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h2>Ebou</h2>
+                        <center>
+                            <h3>Ebou Ebou Ebou</h3>
+                            <p>Ebou Ebou Ebou Ebou Ebou Ebou Ebou Ebou Ebou Ebou Ebou Ebou  Ebou Ebou Ebou Ebou Ebou Ebou Ebou Ebou Ebou Ebou Ebou Ebou Ebou Ebou Ebou </p>
+                            <button class="clickMe6">Ebouuuuu</button><!--ca lancera un des pop ups-->
+                        </center>
+                    </div>
+                    <div class="ReadImail Smith mail" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h2>John SMITH</h2>
+                        <h3 class="alignementGauche">Hello Paco !</h3>
+                        <p style="width: 90%"class="alignementGauche">Your internship is now over and I know that for you these last few weeks have been intense and
+                            required a lot of sacrifices.
+                            I would like to thank you for all the work you have done, and the whole team joins me in
+                            this approach.
+                            At the start of your internship, we welcomed a young man with no experience who doubted his abilities and who
+                            unfamiliar with the business world.
+                            After weeks of effort and rigor, you end this internship with professional skills and
+                            you have demonstrated your ability to participate in teamwork.
+                            Indeed, we appreciated your listening skills and your desire to learn which allowed you to do this
+                            course a success.
+                        </p>
+                    </div>
+                    <div class="ReadImail Chenevert mail" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h2>Gabriel CHENEVERT</h2>
+                        <h3 class="alignementGauche">Bonjour a tous !</h3>
+                        <p class="alignementGauche mail7">A lieu ce lundi 23 mai a lieu le forum des CIRious Game. Les eleves de CIR2 de Junia ISEN ont par groupe créé des jeux dont ils aimeraient vous faire la demonstration. Nous vous attendons nombreux pour cette belle journée !</p>           
+                    </div>
+                    <div class="ReadImail taoto mail" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h2>Gabri  Taoto</h2>
+                        <center>
+                            <h3>aquí hay cero texto para que parezca que estamos hablando ruso</h3>
+                            <p>La frontera oriental, que se extiende a lo largo ya la derecha, se extiende desde las orillas del río Éufrates hasta el borde del Nilo, y a la izquierda limita con los pueblos de los sarracenos; recibida del rey, como indica el apellido.</p>
+                        </center>
+                    </div>
+                    <div class="ReadImail Narata mail" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h2>Narata</h2>
+                        <center>
+                            <h3 class="mail9">Narata</h3>
+                            <p>Il y a eu un souci avec votre commande n° 13354d1q513. Cliquez pour obtenir le detail de la livraison et pour pouvoir beneficier du SAV.</p>
+                            <button class="clickMe">Click me</button><!--ca lancera un des pop ups-->
+                        </center>
+                    </div>
+                    <div class="ReadImail PiereBloc mail" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h2>Pierre Bloc</h2>
+                        <h3 class="alignementGauche">bonzouère !</h3>
+                        <p class="alignementGauche mail5">Moi je suis le mec relou qui envoie des mails relou juste pour etre relou ! ce mail ne contient absolument rien d'intéressant pour toi sauf peut-etre un super lien sur lequel tu devrait cliquer... vas-y essaye ça en vaut le coup je te promet ! Allez je sais que t'as envie de cliquer !!</p>
+                        <a style="font-size: 2vh;" class="alignementGauche" href="https://www.mozilla.org/fr/">le_lien_super_style_tu_vas_gagner_de_la_tune</a><!--changer le href => ca lancera un des pop ups-->
+                    </div>
+                    <div class="ReadImail UCG mail" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h2>U C G</h2>
+                        <center>
+                            <h3>Bientôt la fête des grand-mères !</h3>
+                            <p>Il est bientôt temps de dire "bonne fête" à mamie ! Pourquoi ne pas matérialiser cette amour par le super nouveau film de Danny boon ? On sait très bien  que mamie KIFFE ses films absolument inimitables ! Reservez dès à présent vos billets sur notre site UCG (voir lien ci-desous).</p>
+                            <button class="clickMe2">Je réserve !</button><!--ca lancera un des pop ups-->
+                        </center>
+                    </div>
+                    <div class="ReadImail leCoinBon mail" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h2>LeCoinBon</h2>
+                        <center>
+                            <h3>Y'a du nouveau sur LeCoinBon !</h3>
+                        </center>    
+                        <p class="alignementGauche mail12">Voici la NewsLetter de cette semaine ! De grandes nouveautés sont sur le point de tomber : vous pourrez bientôt bénéficier la la livraison gratuite en optant pour un compte LeCoinBon premium ! Seulement 7.99 euros par mois dont les deux premiers offerts pour toute souscription dans les 3 semaines à venir.</p>
+                        <p class="alignementGauche mail12">Rendez-vous sur notre site et à bientôt !</p>  
+                    </div>
+                    <div class="ReadImail Banque mail" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h2>Banque Populaire</h2>
+                        <h3 class="alignementGauche">Bonjour Paco Naikté,</h3>
+                        <p style= "padding-top: 1vh; padding-bottom: 1vh" class="alignementGauche">Nous vous informons qu'un nouveau document est disponible dans votre espace de banque a distance.</p>
+                        <p style= "padding-top: 1vh; padding-bottom: 1vh" class="alignementGauche">Votre conseiller se tient a votre disposition pour répondre a toutes vos questions.</p>         
+                        <p style= "padding-top: 1vh; padding-bottom: 1vh" class="alignementGauche">Cordialement,</p>          
+                        <p style= "padding-top: 1vh; padding-bottom: 1vh" class="alignementGauche">Banque Populaire du Nord.</p>
+                    </div>
+                    <div class="ReadImail Annouk mail" style="display:none";>
+                        <div class="backAllImail"><i class="fa-solid fa-arrow-left"></i></div>
+                        <h2>Annouk de FEVER</h2>
+                        <center>
+                            <h3>VOTRE COMMANDE N'A PAS PU ETRE LIVREE</h3>
+                            <p>Il y a eu un souci avec votre commande n° 5166332sxs98zjo5. Cliquez pour obtenir le detail de la livraison et pour pouvoir beneficier du SAV.</p>
+                            <button class="clickMe">Check</button><!--ca lancera un des pop ups-->
+                        </center>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+    
+        <div id="Faux-Rom" rel="Faux-Rom">
+            
+            <div class="headerFaux-Rom">
+                <i class="Title fa-brands fa-solid fa-envelope"> Faux-Rom</i>
+                <div class="goBack"> <i class="cross fa-solid fa-xmark"></i> </div>
+            </div>
+        
+            <div class="bigboxlockFaux-Rom">
+                <div class="middleboxlock_Faux-Rom">
+    
+                    <div class="Faux-RomPass">
+                        <h1>Mot de Passe</h1>
+                        <input type="text" id="Faux-Rompassword">
+                        <div class="valide valideFaux-Rom" rel="Faux-Rompassword">Se connecter</div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="bigboxFaux-Rom">
+                <div class="middleboxFaux-Rom">
+                    
+                    <div class="titre">
+                        <h3>Faux-Rom : Le forum des passionnes et curieux de l'informatique !</h3>
+                    </div>
+            
+                    <i class="fa-solid fa-user iconereg"></i>
+    
+                   <div class="box1">
+                        <p><strong>Dalmatien62 : </strong> Bonjour,
+                            quand je navigue sur internet j'ai des pop-up de pub qui s'ouvrent tout seul
+                            est-ce que vous pensez que je me suis fais hacke, une histoire de connection public ? J'ai un petit peur 
+                            si quelqu'un peu m'aider merci </p>
+                    </div>
+                
+                    <div class="box2">
+                        <p><strong>Rafjiolis156 : </strong>Bonjour a tous, j'ai developpe un programme en C# 
+                            qui me permet de recuperer des donnees d'un lecteur
+                            de code-barres. Quand je le lance avec Visual 
+                            Studio (2010) en debogage....</p>
+                    </div>
+            
+                    <div class="box3" onclick="document.querySelector('.bigboxFaux-Rom').style.display = 'none', document.querySelector('.bigboxFaux-Rom_reponseBastiens').style.display = 'block'"> 
+                        <p><strong>Bastiens : </strong>Bonjour j'ai une question concernant
+                        la sécurité de mon moteur de recherche, pouvez vous m'aider svp ?</p>
+                    </div>
+        
+                    <div class="box4">
+                        <p></p>
+                        <img src="/front/css/img/lave-vaiselle.jpg" alt="photo pub lave-vaiselle" height="150" width="150">
+                    </div>
+        
+                    <div class="box5">
+                        <p></p>
+                        <img src="/front/css/img/voiture.jpg" alt="pub voiture" width="160" height="120">
+                    </div>
+                </div>
+    
+            </div>
+    
+            <!-- Affichage fenetre parametre -->
+            <div class="bigboxFaux-Rom_para">
+                <div class="middleboxFaux-Rom_para">
+    
+                    <div class="profil">
+                        <div class="pseudoinfo adds" div id="pseudovalue">Pseudo : Talaso_Pesto</div>
+        
+                        <div class="descinfo adds" id="descvalue">Description : 
+                            Bonjour je suis Talaso_Pesto.
+                            J'habite a JuniaCity, j'adore l'informatique et le sport.
+                            J'ai une soeur de 16 ans, elle s'appelle Mathilde.
+                            Nos 2 parents travaillent chez Tesla.
+                            J'ai un chien qui s'appelle macro.
+                        </div>
+                    </div>
+    
+                    <div class="profilmodif">
+                        <div class="pseudoinfo adds">Pseudo : <input type="text" id="pseudoinfo">
+                        </div>
+        
+                        <div class="descinfo adds">Description :<input type="text" id="descinfo">
+                        </div>
+    
+                        <div class="mdpFaux-Rom">Changer le mot de passe</div>
+    
+                        <div class="ConfirmerInfoFauxRom">Confirmer </div>
+                    </div>
+    
+                    
+                    <div class="border retournerFaux-Rom">Retourner sur le Faux-Rom</div>
+                
+    
+                </div>
+            </div>
+    
+            <!-- Affichage fenetre Changement de mots de passe -->
+            <div class="bigboxFaux-Rom_changeMdp">
+                <div class="middleboxFaux-Rom_changeMdp">
+    
+                    <h1>Changer son Mot de Passe</h1>
+    
+                    <div>Ancien Mot de Passe
+                        <input id="oldPasswordFaux-Rom" value="" placeholder="Entrez l'ancien mot de passe">
+                    </div>
+                    
+                    <div>Nouveau Mot de Passe
+                        <input id="newPasswordFaux-Rom" value="" placeholder="Entrez le nouveau mot de passe">
+                    </div>
+                    
+                    <div>Confirmation
+                        <input id="confirmPasswordFaux-Rom" value="" placeholder="Re-saisissez le nouveau mot de passe">
+                    </div>
+    
+                    <span id="msgFaux-Rom"></span>
+    
+                    <div class="annulerMdpFaux-Rom">Annuler</div>
+                    <div class="ConfirmerMdpFaux-Rom">Confirmer</div>
+    
+                </div>
+            </div>
+    
+            <!-- Affichage fenetre reponse a bastien -->
+            <div class="bigboxFaux-Rom_reponseBastiens">
+                <div class="middleboxFaux-Rom_reponseBastiens">
+    
+                    <h1>Bastien</h1>
+    
+                    <div class="discutionBastiens">
+                        <div>Bonjour ! Ces derniers temps j'entend de plus en plus parler de problemes
+                            de piratage sur le net. Cela m'effraie legerement et j'aimerais ne 
+                            pas en etre la victime, etant novice sur internet et avec les 
+                            ordinateurs en general, pourriez vous me dire quel moteur de 
+                            recherche securise le plus mes donnees personnelles ? 
+                            En esperant que quelqu'un puisse me renseigner, merci d'avance pour vos reponses !</div>
+                    </div>
+                    
+    
+                    <input type="text" id="reponseBastiens"><div class="EnvoieReponseFauxRom">Envoyer</div>
+    
+                </div>
+            </div>
+    
+        </div>
+
+    </div>
+
+    <div class="PtitCarre">
+        <div class="Carre clickMission"  onclick="document.querySelector('.mission').style.display = 'block', document.querySelector('.blockNote').style.display = 'none'">Mission</div>
+        <div class="Carre clickBlockNote" onclick="document.querySelector('.blockNote').style.display = 'block', document.querySelector('.mission').style.display = 'none'">Bloc-Note</div>
+    </div>
+
+    <div class="grosCarre">
+        <div class="GrosCarre mission">
+            <h1>Mission</h1>    
+            <div class="leave cross fa-solid fa-xmark" onclick="document.querySelector('.mission').style.display = 'none'"></div>
+            <h2 id="TitreMission">Chambre</h2>
+            <ul id="listeMission"></ul>
+        </div>
+
+        <div class="GrosCarre blockNote">
+            <h1>Block-Note</h1>
+            <div class="leave cross fa-solid fa-xmark" onclick="document.querySelector('.blockNote').style.display = 'none'"></div>
+            <div class="ListeMdp">
+                <div class="code">
+                    <h2>PC</h2>
+                    <p class="BLPC">???</p>
+                </div>
+                <div class="code">  
+                    <h2>FaceJunia</h2>
+                    <p class="BLFaceJunia">???</p>
+                </div>
+                <div class="code">
+                    <h2>InstaGroove</h2>
+                    <p class="BLInstaGroove">???</p>
+                </div>
+                <div class="code">
+                    <h2>Imail</h2>
+                    <p class="BLImail">???</p>
+                </div>
+                <div>
+                    <h2>Faux-Rom</h2>
+                    <p class="BLFauxRom">???</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="dialogue" style="visibility: hidden;">
+    </div>
+    
+</body>
+    <script src="../js/player.js"></script>
+    <script src="../js/mission.js"></script>
+    <script src="/front/js/page.js"></script>
+    <script src="/front/js/bulle.js"></script>
+    
+</html>

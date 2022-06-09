@@ -1,0 +1,557 @@
+
+body{
+    display: flex;
+    margin: 0%;
+    padding: 0px;
+}
+
+
+
+
+.Room{
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+    background-size: 80vw 90vh;
+    background-repeat: no-repeat;
+    background-position: 10vw 5vh;
+    background-color: black;
+}
+
+
+
+#fondBureau{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../image/PC.png);
+    background-size: cover;
+}
+
+#fondTele{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../image/TV.png);
+    background-size: cover;
+}
+
+#fondFrigo{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../image/frigo.png);
+    background-size: cover;
+}
+
+#fondTable{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../image/livreMDP.png);
+    background-size: cover;
+}
+
+#PC{
+    /* background-color: black; */
+    height: 71.8vh;
+    width: 70vw;
+    margin: 8.8vh 33vh;
+    /* border: solid 8px black; */
+}
+
+
+#fondPC{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../image/PCzoome_fondecran.png);
+    background-size: cover;
+}
+
+#lettre{
+    position: absolute;
+    top: 25vh;
+    left: 20vw;
+    width: 60vw;
+    height: 55vh;
+    background-image: url(../image/lettre.png);
+    background-size: 100% 100%;
+}
+
+#PClock{
+    background-color: black;
+    height: 23.5vh;
+    width: 67.5vw;
+    margin: 8.5vh 32.5vh;
+    border: solid 8px black;
+    color: white;
+    text-align: center;
+    padding-top: 20vh;
+    padding-bottom: 30vh; 
+}
+
+#PClock h1{
+    font-size: 10vh;
+}
+
+#PCpassword{
+    font-size: 2rem;
+}
+
+#PCpassword:focus{
+    outline: none;
+    border-color: yellow;
+    box-shadow: 0 0 10px rgb(188, 255, 32)
+}
+
+
+
+#Ordi{
+    position: absolute;
+    left: 18.5vw;
+    top: 31vh;
+    width: 4vw;
+    height: 8vh;
+}
+
+.BureauClick{
+    position: absolute;
+    left: 14.6vw;
+    top: 17vh;
+    /* border: solid 2px black; */
+    width: 4vw;
+    height: 5vh;
+    border-radius: 10px;
+    transition-duration: 2s;
+}
+
+.clickBox {
+    height: 3vh;
+    width: 9vw;
+    position: absolute;
+    left: 44vw;
+    bottom: 9vh;
+}
+
+.mdpBox {
+    background-color: white;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    top: 30vh;
+    left: 30vw;
+    padding: 10vh;
+    width: 30vw;
+    border: grey;
+    border-radius: 2px;
+}
+
+.clickMdpPC{
+    width: 4vw;
+    height: 8vh;
+    position: absolute;
+    bottom: 4vh;
+    left: 9vw;
+}
+
+.mdpPC{
+    background-color: wheat;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    top: 30vh;
+    left: 30vw;
+    padding: 10vh;
+    width: 30vw;
+}
+
+.clickPost-itJunia {
+    background-color: wheat;
+    height: 25vh;
+    width: 7vw;
+    position: absolute;
+    bottom: 6vh;
+    right: 13.5vw;
+}
+
+.clickPost-itInsta {
+    height: 32vh;
+    width: 10vw;
+    position: absolute;
+    bottom: 39vh;
+    right: 26.5vw;
+}
+
+.mdpFrigoJunia{
+    background-color: wheat;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    top: 30vh;
+    left: 30vw;
+    padding: 10vh;
+    width: 30vw;
+}
+
+.mdpTableInsta{
+    background-color: wheat;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    top: 30vh;
+    left: 30vw;
+    padding: 10vh;
+    width: 30vw;
+}
+
+#Table{
+    position: absolute;
+    left:34.5vw;
+    top: 40vh;
+    width: 4vw;
+    height: 12vh;
+}
+
+.TableClick{
+    position: absolute;
+    left: 31.7vw;
+    top: 40vh;
+    /* border: solid 2px black; */
+    width: 3vw;
+    height: 9vh;
+    border-radius: 10px;
+}
+
+
+#TV{
+    position: absolute;
+    left:55vw;
+    top: 82vh;
+    width: 9vw;
+    height: 6vh;
+}
+
+.TVClick {
+    position: absolute;
+    left: 56vw;
+    top: 80vh;
+    /* border: solid 2px black; */
+    width: 6.5vw;
+    height: 9vh;
+    border-radius: 10px;
+}
+
+#Frigo{
+    position: absolute;
+    left:63.5vw;
+    top: 31vh;
+    width: 4vw;
+    height: 4vh;
+}
+
+.FrigoClick {
+    position: absolute;
+    left: 63.5vw;
+    top: 14vh;
+    /* border: solid 2px black; */
+    width: 4.3vw;
+    height: 17vh;
+    border-radius: 10px;
+}
+
+#Console{
+    position: absolute;
+    left:75vw;
+    top: 45vh;
+    width: 9vw;
+    height: 6vh;
+}
+
+.LettreClick {
+    position: absolute;
+    left: 73.3vw;
+    top: 52vh;
+    /* border: solid 2px black; */
+    width: 8vw;
+    height: 4vh;
+    border-radius: 10px;
+}
+
+.clickLivre {
+    /* background-color: black; */
+    height: 80vh;
+    width: 26vw;
+    position: absolute;
+    left: 8vw;
+    top: 10vh;
+    /* BORDER: 2px solid black; */
+}
+
+.tableauMdp{
+    background-image: url(../image/tableau.png);
+    height: 90vh;
+    width: 70vw;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 15vw;
+    top: 5vh;
+}
+
+
+.clickPC{
+    height: 60vh;
+    width: 50.5vw;
+    position: absolute;
+    left: 25.5vw;
+    top: 12vh;
+}
+
+
+.Icon{
+    /* border: solid 3px black; */
+    width: 2.5vw;
+    height: 2.5vw;
+    margin: 2.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 3vh;
+}
+
+.IconFaceJunia{
+    /* background-color: white; */
+    position: relative;
+    top: 1vw;
+}
+
+/* .IconInstaGroove{
+    background-color: orange; 
+}
+
+.IconImail{
+    background-color: yellow; 
+} */
+
+.IconForum{
+    /* background-color: green; */
+    position: relative;
+    top: 2vw;
+}
+
+.ComeBackRoom{
+    width: 10vw;
+    height: 5vh;
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    color: white;
+}
+
+.ComeBackBureau{
+    color: white;
+    width: 10vw;
+    height: 5vh;
+    position: absolute;
+    top: 2%;
+    left: 1%;
+}
+
+
+#Forum{
+    background-color: green;
+    height: 85vh;
+    width: 60vw;
+    margin: 4vh 40vh;
+    border: solid 8px black;
+    
+}
+
+.goBack{
+    width: 3.5vw;
+    height: 3.3vw;
+    position: absolute;
+    top: 9vh;
+    left: 79vw;
+
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.PtitCarre {
+    height: 22vh;
+    width: 6vw;
+    position: absolute;
+    top: 1vh;
+    left: 94vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Pixeled';
+    font-size: 60%;
+}
+
+.Carre{
+    height: 4.5vw;
+    width: 4.5vw;
+    background-color: wheat;
+    border: 3px solid black;
+    text-align: center;
+}
+
+.GrosCarre{
+    height: 93vh;
+    width: 33vw;
+    background-color: black;
+    position: absolute;
+    left: 2vw;
+    top: 3vh;
+    border-radius: 50px;
+    text-align: center;
+    z-index: 1000;
+    color: wheat;
+    border: 3px solid wheat;
+    font-family: 'Minimal';
+    font-size: 1.5rem;
+}
+
+.mission h1{
+    background-color: black;
+    height: 8vh;
+    border: 3px solid wheat;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    position: relative;
+    bottom: 3.5vh;
+    color: wheat;
+}
+
+.blockNote h1{
+    background-color: black;
+    height: 8vh;
+    border: 3px solid wheat;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    position: relative;
+    bottom: 3.5vh;
+    color: wheat;
+}
+
+.GrosCarre .leave{
+    position: relative;
+    bottom: 13vh;
+    left: 10vw;
+    
+}
+
+.ListeMdp{
+    position: relative;
+    bottom: 10vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+}
+
+.code{
+    border-bottom: 1px solid black;
+    width: 20vw;
+}
+
+.pop {
+    font-size: 150%;
+    text-align: center;
+}
+
+.pop1 {
+    /* display: block; */
+    POSITION: absolute;
+    bottom: 22vh;
+    background-color: white;
+    width: 40vh;
+    left: 50vh;
+}
+
+.pop2 {
+    position: absolute;
+    bottom: 45vh;
+    left: 45vh;
+}
+
+.pop3{
+    POSITION: absolute;
+    bottom: 20vh;
+    left: 75vh;
+    width: 20vh;
+}
+
+.pop4 {
+    position: absolute;
+    bottom: 20vh;
+    width: 50vh;
+    left: 115vh;
+}
+
+.wifiicon{
+    font-size: 75%;
+    color: white;
+    position: absolute;
+    left: 73vw;
+    bottom: 18.3vh;
+}
+
+.ListeMdp h2{
+    font-size: 1rem;
+}
+
+#dialogue{
+    background-color: wheat;
+    height: 20vh;
+    width: 60vw;
+    position: absolute;
+    background-size: cover;
+    bottom: 10vh;
+    left: 30vh;
+    border: 4px solid black;
+    border-radius: 30px;
+    padding: 7vh;
+    font-family: 'Minimal';
+    font-size: 1.8rem;
+}
+
+.parametreWifi{
+    background: bisque;
+    position: absolute;
+    right: 13.3vw;
+    top: 9vh;
+    height: 35.4vw;
+    width: 15vw;
+    border: 1px solid black;
+}
+
+.parametreWifi h1{
+    border-bottom: 2px solid black;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.reseau{
+    padding: 10px;
+    border-bottom: 2px solid black;
+    position: relative;
+    bottom: 4vh;
+}
+
+.reseau input{
+    position: relative;
+    bottom: 1vh;
+}
+
+.connectReseau{
+    border: 1px solid black;
+    width: 7vw;
+    text-align: center;
+    background: darkblue;
+    border-radius: 20px;
+    padding: 0.5vh;
+}

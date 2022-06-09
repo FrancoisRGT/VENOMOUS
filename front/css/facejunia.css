@@ -1,0 +1,285 @@
+/*PAGE FACEJUNIA DE BASE SANS AUCUN ECRAN DEDANS !!!!!!!*/
+@font-face {
+    font-family: 'Pixeled';
+    src: url(../fonts/Pixeled.ttf);
+}
+
+@font-face {
+    font-family: 'Impostor';
+    src: url(../fonts/TheImpostor.ttf);
+}
+
+@font-face {
+    font-family: 'Minimal';
+    src: url(../fonts/MinimalFont5x7.ttf);
+}
+
+
+
+
+#FaceJunia{
+    background-color: #9CC4B2;
+    width: 68.2vw;
+    margin: 8vh 32.9vh;
+}
+
+.headerFaceJunia {
+    background-color: #006d68;
+    border-bottom: 8px solid black;
+    height: 10vh;
+}
+
+.headerFaceJunia .Title{
+    position: relative;
+    top: 20%;
+    left: 2%;
+    color: #ff5c39;
+    font-family: 'Pixeled';
+    font-size: 2rem;
+}
+
+.headerFaceJunia .cross{
+    position: relative;
+    top: 35%;
+}
+
+/*ECRAN PRINCIPALE DE FACEJUNIA UNE FOIS CONNECTE !!!!!!!*/
+.bigboxFaceJunia {
+    height: 63.5vh;
+    background-color: #9CC4B2;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: gray lightgray ;
+}
+
+/*CHANGER LA BARRE DE SCROLL DANS CHROME*/
+.bigboxFaceJunia::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+.bigboxFaceJunia::-webkit-scrollbar-track {
+    background-color: #9CC4B2;
+  }
+  
+.bigboxFaceJunia::-webkit-scrollbar-thumb {
+    background-color: #ff5c39;
+    border-radius: 20px;
+    border: 0px solid #9CC4B2; 
+}
+
+/*FOND GRIS OU IL Y A LA PHOTO ET LES DONNEES DU JOUEUR*/
+.middleboxFaceJunia {
+    background-color: #9CC4B2;
+    margin-right: 5vw;
+    margin-left: 8vw;
+    height: 100vh;
+}
+
+.iconeregInsta{
+    position: relative;
+    height: 7vh;
+    width: 7vh;
+    font-size: 150%;
+    left: 6vh;
+    top: 2vh;
+}
+
+.wallpaper {
+    background-image: url(../image/pixelartBann.jpg);
+    background-size: cover;
+    position: relative; 
+    top: 1.5vh;
+    left: 12vw;
+    height: 18vh;
+    width: 30vw;
+    border-radius: 15px;
+}
+
+.pdp {
+    text-align: center;
+    position: relative;
+    left: 25vw;
+    bottom: 5vh;
+    background-image: url(../image/pdp-annon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 15px;
+}
+
+.name {
+    text-align: center;
+    font-family: 'Impostor';
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 6vh;
+}
+
+.details {
+    font-family: 'Minimal';
+    text-indent: 12vh;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 5px;
+    position: relative;
+    bottom: 5vh;
+}
+
+
+.infos {
+    font-family: 'Minimal';
+    white-space: pre;
+    position: relative;
+    bottom: 11vh;
+}
+
+
+.loisirs {
+    font-family: 'Minimal';
+    font-size: 1.5rem;
+    margin-left: 50px;
+    word-spacing: 0.2em;
+    position: relative;
+    bottom: 10vh;
+}
+
+.reglage{
+    position: relative;
+    bottom: 45vh;
+    left: 92vh;
+    height: 4.5vh;
+    width: 5vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0.5vh;
+    font-size: 1.5rem;
+}
+
+
+/*ECRAN VERROUILLE DE FACEJUNIA !!!!!!!*/
+
+#FaceJuniaLock{
+    background-color: #9CC4B2;
+    height: 85vh;
+    width: 60vw;
+    margin: 4vh 40vh;
+    border: solid 8px #071013;
+}
+
+#FaceJuniapassword{
+    border-radius: 10px;
+    border: solid #071013 1px;
+}
+
+.middleboxlockFaceJunia {
+    background-color: #9CC4B2;
+    margin-left: 15vh;
+    margin-right: 14vh;
+    height: 63.5vh;
+    
+}
+
+.bigboxlockFaceJunia {
+    height: 63vh;
+    background-color: #9CC4B2;
+    position: relative;
+    bottom: 3.5vh;
+}
+
+.FaceJuniaPass{
+    text-align: center;
+    position: relative;
+    top: 20vh;
+    font-family: 'Pixeled';
+    color: #071013;
+    font-size: 0.5em;
+}
+
+.FaceJuniaPass h1{
+    font-size: 1rem;
+}
+
+.valideFaceJunia{
+    margin-top: 2vh;
+    border: 2px solid #071013;
+    height: 5vh;
+    width: 8vw;
+    border-radius: 10px;
+    position: relative;
+    left: 23.1vw;
+    padding-top: 0.5vh;
+}
+
+/*ECRAN DE PARAMETRE DE FACE JUNIA*/
+
+.middleboxFaceJunia_para {
+    background-color:#9CC4B2;
+    font-family: 'Minimal';
+    font-size: 1.5rem;
+    margin-left: 15vh;
+    margin-right: 14vh;
+    height: 63.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bigboxFaceJunia_para {
+    height: 63.5vh;
+    background-color: #9CC4B2;
+}
+
+.border{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding:2vh;
+}
+
+
+/*ECRAN DE CHANGEMENT DE MDP*/
+
+.middleboxFaceJunia_changeMdp {
+    background-color: #9CC4B2;
+    margin-left: 15vh;
+    margin-right: 14vh;
+    height: 63.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Minimal';
+    font-size: 2rem;
+}
+
+.Text{
+    font-size: 1.5rem;
+}
+
+.bigboxFaceJunia_changeMdp {
+    height: 63.5vh;
+    background-color: #9CC4B2;
+}
+
+/*ECRAN DE CHANGEMENT DES INFOS*/
+
+.middleboxFaceJunia_changeInfo {
+    background-color: #9CC4B2;
+    margin-left: 15vh;
+    margin-right: 14vh;
+    height: 63.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Minimal';
+    font-size: 2rem;
+}
+
+.bigboxFaceJunia_changeInfo {
+    height: 63.5vh;
+    background-color: #9CC4B2;
+}

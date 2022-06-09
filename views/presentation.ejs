@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Venomous : Page d'accueil </title>
+    <html lang="fr">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/front/css/styleAccueil.css" />
+    <!-- <script type="text/javascript" src="Observable.js"></script>  -->
+    <!--<link rel="icon" type="image/png" sizes="16x16" href="">-->   <!--Faire image jeu en mieux ! -->
+  </head>
+
+
+  <body > 
+    <div id="navbar">
+      <a href="/front/html/game.html">GAME</a>
+      <a href="???.html">??</a>
+      <a href="/front/html/index.html">V</a>
+      <a href="abtus.html">ABOUT US</a>
+      <a href="/logout">Log Out</a>
+    </div>
+
+    <section>
+      <p class="nameGame">V E N O M O U S</p>
+
+      <!--
+        <p class="ntm"> Vos choix vous meneront peut-être au succès ou à la défaite. <br>Vous seul être maitre de votre destin</p>
+      -->
+    </section>
+  
+    <section>
+      <button onclick="document.getElementById('start').style.display='block'" style="width:auto;" class="startbtn">JOUER</button>
+
+      <div id="start" class="modal">
+          <form class="modal-content animate" action="?.html" method="post">
+          <div class="imgcontainer">
+              <span onclick="document.getElementById('start').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <h3>Selectionner profil</h3>
+          </div>
+  
+          <div class="container">
+           <!-- <button type="submit"><a href="/front/html/index.html">Reprendre </button> A FAIRE SI ON A LE TEMPS--> 
+              
+            <div id="BouNewGame" onclick ="goIndex()">Nouvelle partie</div><script>
+              function goIndex(){
+                window.location.href='/front/html/index.html';
+              }
+            </script>
+            
+            <!-- si une partie existe déjà, faire un popup pour demander confirmation pour écraser l'ancienne -->
+  
+  
+          </div>
+          </form>
+      </div>
+    </section>
+  </body>
+</html>

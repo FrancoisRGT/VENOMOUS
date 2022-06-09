@@ -1,0 +1,205 @@
+/*---- POLICES ----*/
+@font-face {
+    font-family: 'pixel';
+    src: url('font/pixelmix.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/*---- BALISES GENERALES ----*/
+body{
+    background-color: #253a34;
+    color: #ffffff;
+    margin : 0;
+
+     /* ne pas selectionner le texte */
+     -moz-user-select: none; /* Firefox */
+     -webkit-user-select: none; /* Chrome, Safari, Opéra*/
+     -ms-user-select: none; /* Internet explorer, Edge */
+     user-select: none; /* Propriété standard */
+}
+
+/*permet de retirer la barre de défilement*/
+body::-webkit-scrollbar{
+    display: none;
+}
+
+
+/*---- NAVBAR ----*/
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center ;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 15px 0;
+}
+  
+#navbar a {
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 3px solid transparent;
+    font-family: pixel;
+}
+
+
+
+
+
+/*---- Fond et titre ----*/
+.nameGame{
+    text-align: center;
+    margin: auto;
+    padding-top: 150px;
+    font-size: 70px;
+}
+
+.nameGame2{
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+    font-size: 50px;
+    letter-spacing: 50px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:visited{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+
+#trait{
+    display: flex;
+    flex-direction: row;
+}
+
+.pic{               /* changer taille pour être fait automatiquement*/
+    height: 5%;
+    width: 5%;
+}
+
+.ntm{
+    text-align: center;
+    padding-top:2%;
+}
+
+.start{
+    padding-top: 100px;
+    text-align: center;
+}
+
+
+
+/*----SELECT PROFIL ----*/
+/*---- boutons ----*/
+button {
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+
+}
+  
+/*---- bouton START ----*/
+.startbtn{
+    background: transparent;
+    border: none ;
+    color: #faf4f4;
+    margin: 8% 45% 0% 45%;   /* changer pour centrer automatiquement*/
+    padding: 20px 40px;
+}
+
+.truc .startbtn{
+    color: white;
+}
+
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+.container {
+    padding: 16px;
+}
+  
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+  
+.pasConnecter{
+    text-align: center;
+}
+
+/*---- ----*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    color: #292828;
+    padding-top: 60px;
+}
+  
+  /* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+  
+  /* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+  
+.close:hover, .close:focus {
+    color: red;
+    cursor: pointer;
+}
+  
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+  
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}

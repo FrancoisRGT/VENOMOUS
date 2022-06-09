@@ -1,0 +1,424 @@
+@font-face {
+    font-family: 'Pixeled';
+    src: url(../fonts/Pixeled.ttf);
+}
+
+@font-face {
+    font-family: 'Minimal';
+    src: url(../fonts/MinimalFont5x7.ttf);
+}
+
+#InstaGroove{
+    background-color: #E16F7C ;
+    width: 68.2vw;
+    margin: 8vh 32.9vh;
+    /* border: solid 8px black; */
+}
+
+.headerInstaGroove {
+    background-color: #DD5E98;
+    border-bottom: 8px solid black;
+    height: 5vw;
+}
+
+.headerInstaGroove .Title{
+    position: relative;
+    top: 20%;
+    left: 2%;
+    color:  #71A2B6;
+    font-family: 'Pixeled';
+    font-size: 2rem;
+}
+
+.headerInstaGroove .cross{
+    position: relative;
+    top: 10%;
+}
+
+.bigboxLockInstaGroove{
+    height: 31vw;
+    background-color: #E16F7C;
+    position: relative;
+    bottom: 1.75vw;
+}
+
+.middleboxlock_InstaGroove {
+    background-color: #E16F7C;
+    height: 100%;
+    font-family: 'Minimal';
+}
+
+.bigboxlock_InstaGroove {
+    height: 30.5vw;
+    background-color: #E16F7C;
+    position: relative;
+    bottom: 1.75vw;
+}
+
+.InstaGroovePass{
+    text-align: center;
+    position: relative;
+    top: 10vw;
+    font-family: 'Pixeled';
+    font-size: 0.5em;
+}
+
+.InstaGroovePass h1{
+    font-size: 1rem;
+}
+
+#InstaGroovepassword{
+    border-radius: 10px;
+    border: solid black 1px;
+}
+
+.valideInstaGroove{
+    margin-top: 1vw;
+    border: 2px solid black;
+    height: 2.5vw;
+    width: 8vw;
+    border-radius: 10px;
+    position: absolute;
+    left: 30vw;
+    padding-top: 0.25vw;
+} 
+
+.middleboxInstaGroove{
+    background-color: #E16F7C;
+    height: 31.65vw;
+    font-family: 'Minimal';
+
+}
+
+.imgpseudo{
+    width: 12.5vw;
+    text-align: center;
+    flex-direction: column;
+    size: 150%;
+    border: 3px solid black;
+    border-radius: 4px;
+    height: auto;
+    position: absolute;
+    top: 11vw;
+    left: 21vw;
+}
+
+.icon {
+    font-size: 120%;
+    flex-direction: column;
+    position: absolute;
+    left: 70vw;
+    top: 10vw;
+}
+
+.iconemess{
+    position: relative;
+    top: 3.5vw;
+}
+
+.boitedestr {
+    display: flex;
+    justify-content: space-around;
+    width: 25vw;
+    position: relative;
+    left: 25vw;
+    top: 1vw;
+    font-size: 1.2rem;
+
+}
+
+.publication{
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    font-size: 130%;
+}
+
+.abonnes{
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    font-size: 130%;
+
+    
+}
+
+.abonnement{
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    font-size: 130%;
+
+}
+
+.bioetbio {
+    flex-direction: column;
+    position: relative;
+    left: 5vw;
+    width: 12.5vw;
+    top: 10vw;
+}   
+
+.bio{
+    font-size: 120%;
+    POSITION: RELATIVE;
+    top: -2.5vw;
+}
+
+.descbio {
+    font-size: 110%;
+    border: 2px solid black;
+    border-radius: 4px;
+    position: relative;
+    top: -2.5vw;
+}
+
+.infoInstaGroove {
+    flex-direction: column;
+    position: relative;
+    left: 25vw;
+    top: -7.5vw;
+    width: 30vw;
+}
+
+.nomuser {
+    border: 2px solid black;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+
+}
+
+.locauser {
+    position: relative;
+    top: 1vw;
+    border: 2px solid black;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+
+.pvuser {
+    position: relative;
+    top: 2vw;
+    border: 2px solid black;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+
+.questionInstaGroove{
+    position: relative;
+    left: 10vw;
+    flex-direction: column;
+    width: 50vw;
+    font-size: 130%;
+    top: 3.5vw;
+    line-height: 2.5vw;
+}
+
+.pseudoInstaGroove {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: -5vw;
+}
+
+.locaInstaGroove {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: -3vw;
+}
+
+.statutcompteInstaGroove {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: -3.25vw;
+}
+
+.mdpInstaGroove{
+    position: relative;
+    top: 1vw;
+    left: -0.5vw;
+    width: 14vw;
+    border: 3px solid black;
+    border-radius: 4px;
+}
+
+.ConfirmerInfoInstaGroove {
+    text-align: center;
+    font-size: 130%;
+    position: relative;
+    top: 7.5vw;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 10vw;
+    left: 30vw;
+}
+
+.retournerInstaGroove{
+    position: relative;
+    left: 20vw;
+    top: 10vw;
+    width: 25vw;
+    text-align: center;
+}
+
+.bigboxInstaGroove_para {
+    height: 31.65vw;
+}
+
+.middleboxInstaGroove_para {
+    height: 31.65vw;
+    font-family: 'Minimal';
+    font-size: 1.2rem;
+}
+
+.middleboxInstaGroove_mess {
+    height: 31.65vw;
+}
+
+.bigboxInstaGroove_mess {
+    height: 31.65vw;
+    font-family: 'Minimal';
+}
+
+.middleboxInstaGroove_changeMdp {
+    background-color: #E16F7C;
+    margin-left: 7.5vw;
+    margin-right: 7.5vw;
+    height: 31.65vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bigboxInstaGroove_changeMdp {
+    height: 31.65vw;
+    background-color: #E16F7C;
+}
+
+.pseudoInstaGroovechange{
+    font-size: 120%;
+    position: relative;
+    top: 1vw;
+}
+
+.locInstaGroovechange{
+    font-size: 120%;
+    position: relative;
+    top: 1vw;
+}
+
+.statutInstaGroovechange{
+    font-size: 120%;
+    position: relative;
+    top: 1vw;
+}
+
+.retourInstaGroove {
+    font-size: 150%;
+    position: relative;
+    left: 57.5vw;
+    top: 1.5vw;
+}
+
+.form-recherch {
+    font-size: 120%;
+    position: relative;
+    left: 23.5vw;
+    top: 1.5vw;
+}
+
+.defilenom {
+    position: relative;
+    width: 15vw;
+    height: 26.25vw;
+    top: 2.5vw;
+    left: 5vw;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 4px;
+}
+
+.defile {
+    display: flex;
+    margin: 1vw;
+    border: 2px solid black;
+    border-radius: 3px;
+
+}
+
+.defile:hover{
+    background-color: #DD5E98;
+    box-shadow: 1px 2px 1px black;
+}
+
+.defile h3{
+    position: relative;
+    left: 1vw;
+}
+
+.discussion {
+    border: 2px solid black;
+    height: 25vw;
+    position: relative;
+    width: 35vw;
+    left: 24vw;
+    bottom: 23.75vw;
+}
+
+.headerdiscuss {
+    border-bottom: 3px solid black;
+    height: 3.5vw;
+}
+
+.presentationmess {
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    top: 5vw;
+}
+
+.arrowpres{
+    font-size: 175%;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+.headerdiscuss h2 {
+    position: relative;
+    bottom: 3.5vw;
+    left: 2vw;
+}
+
+.poubelle {
+    font-size: 130%;
+    position: relative;
+    margin: 1vw;
+    left: 30vw;
+    z-index: 10;
+}
+
+.poubelle4 {
+    font-size: 130%;
+    position: relative;
+    margin: 1vw;
+    left: 30vw;
+    z-index: 10;
+}
+
+.poubelle5 {
+    font-size: 130%;
+    position: relative;
+    margin: 1vw;
+    left: 30vw;
+    z-index: 10;
+}
+

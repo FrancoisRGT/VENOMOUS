@@ -1,0 +1,108 @@
+@font-face{
+    font-family: 'minecraft';
+    src: url(../fonts/Minecraft.ttf);
+}
+
+.mail{
+    font-family: 'minecraft';
+}
+
+
+.ReadImail h2{
+    font-size: 4vh;
+}
+
+.ReadImail h3{
+    font-size: 3vh;
+    padding-top: 2vh;
+}
+
+
+.ReadImail p{
+    padding-top: 4vh;
+    padding-bottom: 5vh;
+    line-height: 3vh;
+    font-size: 2vh;
+    width: 60%;
+}
+
+
+.alignementGauche{
+    padding-left: 50px;
+}
+
+.alignementGauche.mail5{
+    position: relative;
+    bottom: 5vh;
+}
+
+.alignementGauche.basmail5 {
+    position: relative;
+    bottom: 13vh;
+}
+
+/*----- mail1 -----*/
+.clickMe{
+    font-family: 'minecraft';
+    width: 15vw;
+    height: 8vh;
+    background-color: red;
+    font-size: 3vh;
+}
+
+.clickMe:hover {
+    background-color: rgb(206, 0, 0);
+}
+.clickMe:active {
+    transform: translateY(2px);
+}
+
+
+/*----- mail2 -----*/
+.clickMe2{
+    font-family: 'minecraft';
+    width: 30vw;
+    height: 8vh;
+    background-color: rgb(42, 25, 116);
+    font-size: 3vh;
+    position: relative;
+    bottom: 4vh;
+}
+
+.clickMe2:hover {
+    background-color: rgb(37, 22, 105);
+}
+.clickMe2:active {
+    transform: translateY(2px);
+}
+
+
+/*----- mail6 -----*/
+.clickMe6{
+    font-family: 'minecraft';
+    width: 15vw;
+    height: 6vh;
+    background-color: rgb(255, 174, 0);
+    font-size: 3vh;
+}
+
+.clickMe6:hover {
+    background-color: rgb(228, 160, 13);
+}
+.clickMe6:active {
+    transform: translateY(2px);
+}
+
+/*----- mail9 -----*/
+.mail9{
+    font-size: 5vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+/*----- mail12 -----*/
+.mail12{
+    width: 90%;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}

@@ -1,0 +1,292 @@
+@font-face {
+    font-family: 'Pixeled';
+    src: url(../fonts/Pixeled.ttf);
+}
+
+@font-face {
+    font-family: 'Minimal';
+    src: url(../fonts/MinimalFont5x7.ttf);
+}
+
+#Faux-Rom{
+    width: 68.2vw;
+    margin: 8vh 32.9vh;
+    background-color: rgb(168, 162, 162);
+}
+
+.headerFaux-Rom {
+    background-color: rgb(48, 46, 46);
+    border-bottom: 8px solid black;
+    height: 10vh;
+    top: 5vh;
+}
+
+.headerFaux-Rom .Title{
+    position: relative;
+    top: 20%;
+    left: 2%;
+    font-family: 'Pixeled';
+    font-size: 2rem;
+    color: white;
+}
+
+.headerFaux-Rom .cross{
+    position: relative;
+    top: 10%;
+}
+
+/*.bigboxlockFaux-Rom{
+    background-color: white;
+    height: 85vh;
+    width: 60vw;
+    margin: 4vh 40vh;
+    border: solid 8px black;
+}*/
+
+.middleboxlock_Faux-Rom {
+    background-color: rgb(168, 162, 162);
+    height: 75vh;
+    height: 100%;
+}
+
+.bigboxlockFaux-Rom {
+    height: 63vh;
+    background-color: white;
+    position: relative;
+    bottom: 3.5vh;
+}
+
+.Faux-RomPass{
+    text-align: center;
+    position: relative;
+    top: 20vh;
+    font-family: 'Pixeled';
+    font-size: 0.5em;
+}
+
+.Faux-RomPass h1{
+    font-size: 1rem;
+}
+
+#Faux-Rompassword{
+    border-radius: 10px;
+    border: solid black 1px;
+}
+
+.valideFaux-Rom{
+    margin-top: 2vh;
+    border: 2px solid black;
+    height: 5vh;
+    width: 8vw;
+    border-radius: 10px;
+    position: absolute;
+    left: 30vw;
+    padding-top: 0.5vh;
+}
+
+.bigboxFaux-Rom {
+    background-color: rgb(168, 162, 162);
+    position: relative;
+    bottom: 3.5vh;
+}
+
+.middleboxFaux-Rom {
+    background-color: rgb(168, 162, 162);
+    height: 62vh;
+    font-family: 'Minimal';
+    font-size: 1.4rem;
+}
+
+.titre {
+    position: relative;
+    height: 8vh;
+    left: 15vh;
+    margin-right: 40vh;
+    margin-top: 3vh;
+    border: 3px solid black;
+    border-radius: 4px;
+    top: 3vh;
+}
+
+.box1 {
+    position: relative;
+    border: 2px solid black;
+    border-radius: 2px;
+    left: 10vh;
+    margin-right: 60vh;
+    top: -2vh;
+}
+
+.box2 {
+    position: relative;
+    border: 2px solid black;
+    border-radius: 2px;
+    left: 10vh;
+    margin-right: 60vh;
+    /* top: 4vh; */
+}
+
+.box3 {
+    position: relative;
+    border: 2px solid black;
+    border-radius: 2px;
+    left: 10vh;
+    margin-right: 60vh;
+    top: 2vh;
+}
+
+.box4 {
+    font-size: 120%;
+    text-align: center;
+    position: relative;
+    /* border: 2px solid black; */
+    width: 25vh;
+    height: 22vh;
+    border-radius: 2px;
+    left: 98vh;
+    bottom: 50vh;
+}
+
+.box5 {
+    font-size: 120%;
+    text-align: center;
+    position: relative;
+    /* border: 2px solid black; */
+    width: 25vh;
+    border-radius: 2px;
+    height: 23vh;
+    left: 97vh;
+    bottom: 48vh;
+}
+
+.iconereg {
+    position: relative;
+    height: 7vh;
+    width: 7vh;
+    font-size: 150%;
+    left: 6vh;
+    top: -3vh;
+}   
+
+.ConfirmerInfoFaux-Rom {
+    text-align: center;
+}
+
+.ConfirmerMdpFaux-Rom {
+    text-align: center;
+}
+
+.middleboxFaux-Rom_para {
+    display: flex; 
+    background-color: rgb(168, 162, 162);
+    height: 64vh;
+    font-family: 'Minimal';
+    font-size: 1.2rem;
+}
+
+.profilmodif {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2vh;
+    margin: 2vh;
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 50vh;
+    height: 40vh;
+    margin-left: 3vw;
+    /* position: relative;
+    left: 60vh;
+    bottom: 60vh;
+    height: 50vh; */
+}
+
+.ConfirmerInfoFauxRom {
+    text-align: center;
+}
+
+.profil {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2vh;
+    margin: 2vh;
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 50vh;
+    height: 40vh;
+    margin-left: 5vw;
+}
+
+.adds {
+    border: 3px solid black;
+    border-radius: 5px;
+    margin: 2vh;
+    padding: 2vh;
+}
+
+.confirm {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 3px;
+    position: relative;
+    top: 2vh;
+}
+
+.mdpFaux-Rom {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+.retournerFaux-Rom {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2vh;
+    position: absolute;
+    top: 70vh;
+    left: 85vh;
+}
+
+/*ECRAN DE CHANGEMENT DE MDP*/
+
+.middleboxFaux-Rom_changeMdp {
+    background-color: rgb(168, 162, 162);
+    margin-left: 15vh;
+    margin-right: 14vh;
+    height: 64vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Minimal';
+    font-size: 1.2rem;
+}
+
+.bigboxFaux-Rom_changeMdp {
+    height: 64vh;
+    background-color: rgb(48, 46, 46);
+}
+
+.middleboxFaux-Rom_reponseBastiens{
+    background-color: rgb(168, 162, 162);
+    margin-left: 15vh;
+    margin-right: 14vh;
+    height: 60.5vh;
+    font-family: 'Minimal';
+    font-size: 1.2rem;
+}
+
+.discutionBastiens {
+    padding-bottom: 4vh;
+}
+
+.EnvoieReponseFauxRom{
+    /* padding-top: 4vh; */
+    border: 3px solid black;
+    height: 5vh;
+    width: 10vh;
+    text-align: center;
+    margin-top: 4vh;
+    border-radius: 5vh;
+}
